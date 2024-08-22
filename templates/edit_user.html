@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block content_title %}Welcome to the Flask SQLAlchemy Skeleton{% endblock %}
+
+{% block content %}
+<form action="/users/{{user.id}}/edit" method="POST">
+  <label for="first_name">First Name:</label>
+  <input type="text" id="first_name" name="first_name" placeholder="{{user.first_name}}"><br><br>
+
+  <label for="last_name">Last Name:</label>
+  <input type="text" id="last_name" name="last_name" placeholder="{{user.last_name}}"><br><br>
+
+  <label for="image_url">Profile Image URL:</label>
+  <input type="text" id="image_url" name="image_url" placeholder="{{user.image_url}}"><br><br>
+
+  <button type="submit">Edit User</button>
+</form>
+{% endblock %}

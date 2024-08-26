@@ -2,7 +2,7 @@
 
 {% block title %}Edit User{% endblock %}
 
-{% block content_title %}Welcome to the Flask SQLAlchemy Skeleton{% endblock %}
+{% block content_title %}Edit User:{% endblock %}
 
 {% block content %}
 <form action="/users/{{user.id}}/edit" method="POST">
@@ -15,6 +15,6 @@
   <label for="image_url">Profile Image URL:</label>
   <input type="text" id="image_url" name="image_url" placeholder="{{user.image_url}}"><br><br>
 
-  <button type="submit">Edit User</button>
+  <button type="submit">Submit</button>
 </form>
 {% endblock %}

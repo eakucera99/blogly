@@ -11,6 +11,15 @@
     on {{ post.friendly_date }}
   </i></p>
 
+{% if post.tags %}
+<p>
+  <b>Tags:</b>
+  {% for tag in post.tags %}
+  <a href="/tags/{{ tag.id }}"><i class="badge badge-primary">{{ tag.name }}</i></a>
+  {% endfor %}
+</p>
+{% endif %}
+
 <form>
   <button class="btn btn-outline-primary"
           formmethod="GET"
